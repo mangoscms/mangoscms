@@ -47,7 +47,7 @@
         </div>
     </div>
 </div>
-{{ Form::submit('Register', array('class' => 'btn btn-default')); }}
+{{ Form::submit('Register', array('id' => 'submit', 'class' => 'btn btn-default')); }}
 {{ Form::close(); }}
 @if($errors->register_form->has())
     <br>
