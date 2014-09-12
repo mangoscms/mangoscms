@@ -1,5 +1,5 @@
 @if (Auth::guest())
-    {{ Form::open(array('url' => '/', 'role' => 'form')); }}
+    {{ Form::open(array('url' => 'login', 'role' => 'form')); }}
     <div class="row">
         <div class="col-xs-2">
             <div class="form-group">
@@ -18,7 +18,7 @@
     </div>
     <div class="btn-group">
     {{ Form::submit('Log in', array('class' => 'btn btn-default')); }}
-    <a href="{{ URL::to('/register') }}">{{ Form::button('Register', array('class' => 'btn btn-default')) }}</a>
+    <a href="{{ URL::to('register') }}">{{ Form::button('Register', array('class' => 'btn btn-default')) }}</a>
     </div>
     {{ Form::close(); }}
     @if ($errors->login_form->has())

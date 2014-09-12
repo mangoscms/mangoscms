@@ -13,7 +13,7 @@
 @stop
 
 @section('registration_form')
-{{ Form::open(array('url' => '/register', 'role' => 'form')); }}
+{{ Form::open(array('url' => 'register', 'role' => 'form')); }}
 <div class="row">
     <div class="col-xs-2">
         <div class="form-group">
