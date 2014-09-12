@@ -38,7 +38,7 @@ class HomeController extends BaseController {
                     DB::table('logs')->insert(
                                              array('logs_type' => 5, 'logs_relation' => Request::getClientIp(), 'logs_username' => Auth::user()->username, 'logs_datetime' => date('Y-m-d H:i'))
                                              );
-                    return Redirect::intended('/dashboard');
+                    return Redirect::intended('dashboard');
                 }
                 else
                 {
@@ -56,7 +56,7 @@ class HomeController extends BaseController {
                               );
                 $validator = Validator::make(Input::all(), $rules);
                 if ($validator->fails()) {
-                    return Redirect::to('/register')
+                    return Redirect::to('register')
                     ->withErrors($validator, 'register_form')
                     ->withInput(Input::except('password'));
                 }
@@ -82,7 +82,7 @@ class HomeController extends BaseController {
                 }
                 else
                 {
-                    return Redirect::to('/register')
+                    return Redirect::to('register')
                     ->withErrors('This username has been already taken.', 'register_form')
                     ->withInput(Input::except('password'));
                 }
@@ -114,11 +114,11 @@ class HomeController extends BaseController {
                                              array('logs_type' => 3, 'logs_relation' => $entry, 'logs_username' => Auth::user()->username, 'logs_datetime' => date('Y-m-d H:i'))
                                              );
                     User::destroy(Route::input('user_id'));
-                    return Redirect::to('/dashboard');
+                    return Redirect::to('dashboard');
                 }
                 else
                 {
-                    return Redirect::to('/dashboard');
+                    return Redirect::to('dashboard');
                 }
         }
 
@@ -130,7 +130,7 @@ class HomeController extends BaseController {
                               );
                 $validator = Validator::make(Input::all(), $rules);
                 if ($validator->fails()) {
-                    return Redirect::to('/dashboard')
+                    return Redirect::to('dashboard')
                     ->withErrors($validator);
                 }
                 else
@@ -147,6 +147,6 @@ class HomeController extends BaseController {
                 DB::table('logs')->insert(
                                          array('logs_type' => 1, 'logs_relation' => $news['news_title'], 'logs_username' => Auth::user()->username, 'logs_datetime' => date('Y-m-d H:i'))
                                          );
-                return Redirect::intended('/dashboard');
+                return Redirect::intended('dashboard');
         }
 }
