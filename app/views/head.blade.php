@@ -12,6 +12,6 @@
     {{ HTML::script('//code.jquery.com/jquery-1.11.1.min.js') }}
     {{ HTML::script('//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js') }}
     @if (Request::path() == '/dashboard')
-        {{ HTML::script('//cdn.ckeditor.com/4.4.2/standard/ckeditor.js') }}
+        {{ HTML::script('//cdn.ckeditor.com/4.4.4/standard/ckeditor.js') }}
     @endif
 </head>
