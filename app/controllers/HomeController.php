@@ -18,20 +18,20 @@ class HomeController extends BaseController {
         public function doLogin()
         {
                 $rules = array(
-                              'username' => 'required|min:3|max:32|alphanum',
-                              'password' => 'required|min:3|max:32|alphanum'
+                              'login_form_username' => 'required|min:3|max:32|alphanum',
+                              'login_form_password' => 'required|min:3|max:32|alphanum'
                               );
                 $validator = Validator::make(Input::all(), $rules);
                 if ($validator->fails()) {
                     return Redirect::to('/')
                     ->withErrors($validator, 'login_form')
-                    ->withInput(Input::except('password'));
+                    ->withInput(Input::except('login_form_password'));
                 }
                 else
                 {
                     $userdata = array(
-                                     'username' => strtoupper(Input::get('username')),
-                                     'password' => strtoupper(Input::get('username').':'.Input::get('password'))
+                                     'username' => strtoupper(Input::get('login_form_username')),
+                                     'password' => strtoupper(Input::get('login_form_username').':'.Input::get('login_form_password'))
                                      );
                 }
                 if (Auth::attempt(array('username' => $userdata['username'], 'password' => $userdata['password']))) {
