@@ -555,9 +555,9 @@ class Guard {
 	 */
 	protected function refreshRememberToken(UserInterface $user)
 	{
-		//$user->setRememberToken($token = str_random(60));
+		$user->setRememberToken($token = str_random(60));
 
-		//$this->provider->updateRememberToken($user, $token);
+		$this->provider->updateRememberToken($user, $token);
 	}
 
 	/**
@@ -568,12 +568,12 @@ class Guard {
 	 */
 	protected function createRememberTokenIfDoesntExist(UserInterface $user)
 	{
-		//$rememberToken = $user->getRememberToken();
+		$rememberToken = $user->getRememberToken();
 
-		//if (empty($rememberToken))
-		//{
-		//	$this->refreshRememberToken($user);
-		//}
+		if (empty($rememberToken))
+		{
+			$this->refreshRememberToken($user);
+		}
 	}
 
 	/**

@@ -66,15 +66,15 @@ class DatabaseUserProvider implements UserProviderInterface {
 	 */
 	public function retrieveByToken($identifier, $token)
 	{
-		$user = $this->conn->table($this->table)
-                                ->where('id', $identifier)
-                                ->where('remember_token', $token)
-                                ->first();
+		//$user = $this->conn->table($this->table)
+                //                ->where('id', $identifier)
+                //                ->where('remember_token', $token)
+                //                ->first();
 
-		if ( ! is_null($user))
-		{
-			return new GenericUser((array) $user);
-		}
+		//if ( ! is_null($user))
+		//{
+		//	return new GenericUser((array) $user);
+		//}
 	}
 
 	/**
@@ -86,9 +86,9 @@ class DatabaseUserProvider implements UserProviderInterface {
 	 */
 	public function updateRememberToken(UserInterface $user, $token)
 	{
-		$this->conn->table($this->table)
-                            ->where('id', $user->getAuthIdentifier())
-                            ->update(array('remember_token' => $token));
+		//$this->conn->table($this->table)
+                //            ->where('id', $user->getAuthIdentifier())
+                //            ->update(array('remember_token' => $token));
 	}
 
 	/**
