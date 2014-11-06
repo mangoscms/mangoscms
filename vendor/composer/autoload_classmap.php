@@ -185,6 +185,7 @@ return array(
     'Illuminate\\Encryption\\EncryptionServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php',
     'Illuminate\\Events\\Dispatcher' => $vendorDir . '/laravel/framework/src/Illuminate/Events/Dispatcher.php',
     'Illuminate\\Events\\EventServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Events/EventServiceProvider.php',
+    'Illuminate\\Events\\Subscriber' => $vendorDir . '/laravel/framework/src/Illuminate/Events/Subscriber.php',
     'Illuminate\\Exception\\ExceptionDisplayerInterface' => $vendorDir . '/laravel/framework/src/Illuminate/Exception/ExceptionDisplayerInterface.php',
     'Illuminate\\Exception\\ExceptionServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Exception/ExceptionServiceProvider.php',
     'Illuminate\\Exception\\Handler' => $vendorDir . '/laravel/framework/src/Illuminate/Exception/Handler.php',

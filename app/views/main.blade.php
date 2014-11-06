@@ -15,7 +15,6 @@
         </div>
         <div class="row">
             <div class="col-md-10">
-                {{ test::runMangos() }}
                 @foreach ($news as $newsitem)
                     <div class="panel panel-default">
                         <div class="panel-heading">

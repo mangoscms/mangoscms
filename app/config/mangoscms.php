@@ -15,6 +15,5 @@ return array(
              'head.title'           => 'MaNGOSCMS',                             // HTML <title> tag content
              'play'                 => 'Our WoW server is the <b>best</b>',     // the text on the 'How to play' page
              'admin.gmlevel'        => 3,                                       // required gmlevel for admin area; 0 = Player, 1 = Moderator, 2 = Gamemaster, 3 = Administrator
-             'site.customcss'       => 0,                                       // enable this if you want to load the file custom.css for your own css style; 0 = off, 1 = on
-             'mangospath'           => 'C:\Windows\System32\calc.exe'
+             'site.customcss'       => 0                                       // enable this if you want to load the file custom.css for your own css style; 0 = off, 1 = on
              );
